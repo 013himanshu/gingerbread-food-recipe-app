@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:autoTransition="animateToEnd"
+        motion:duration="2000">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/app_name"
+               motion:framePosition="80"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/made_with"
+               motion:framePosition="99"
+               android:alpha="0.7" />
+           <KeyAttribute
+               motion:motionTarget="@+id/heart"
+               motion:framePosition="99"
+               android:alpha="0.7" />
+           <KeyAttribute
+               motion:motionTarget="@+id/by_deadcom"
+               motion:framePosition="99"
+               android:alpha="0.7" />
+           <KeyAttribute
+               motion:motionTarget="@+id/made_with"
+               motion:framePosition="95"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/heart"
+               motion:framePosition="95"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/by_deadcom"
+               motion:framePosition="95"
+               android:alpha="0" />
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/app_icon"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/app_name"
+            motion:layout_constraintVertical_chainStyle="packed"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/app_name"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/heart"
+            motion:layout_constraintTop_toBottomOf="@+id/app_icon"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/made_with"
+            motion:layout_constraintEnd_toStartOf="@+id/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            motion:layout_constraintHorizontal_chainStyle="packed"
+            android:alpha="0.7"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/heart"
+            motion:layout_constraintEnd_toStartOf="@+id/by_deadcom"
+            motion:layout_constraintStart_toEndOf="@+id/made_with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="5dp"
+            android:alpha="0.7"
+            android:layout_marginStart="5dp"
+            motion:layout_constraintHorizontal_bias="0.5" />
+        <Constraint
+            android:id="@+id/by_deadcom"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:alpha="0.7"
+            motion:layout_constraintHorizontal_bias="0.5" />
+    </ConstraintSet>
+</MotionScene>
