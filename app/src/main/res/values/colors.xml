@@ -7,6 +7,13 @@
       <color name="secondary_light">#f9aa33</color>
       <color name="secondaryDark_light">#f69020</color>
 
+      <color name="dark">#313c44</color>
+      <color name="darker">#151b20</color>
       <color name="black">#FF000000</color>
       <color name="white">#FFFFFFFF</color>
+      <color name="lightgrey">#f9f9f9</color>
+      <color name="mediumgrey">#d1d1d1</color>
+      <color name="darkgrey">#4b4b4b</color>
+      <color name="red">#D32F2F</color>
+      <color name="green">#4CAF50</color>
   </resources>
