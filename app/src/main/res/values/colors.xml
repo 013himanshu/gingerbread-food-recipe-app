@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+      //Light Theme...
       <color name="primaryLight_light">#b7c2d3</color>
       <color name="primary_light">#0f346c</color>
       <color name="primaryDark_light">#08214f</color>
@@ -7,6 +8,14 @@
       <color name="secondary_light">#f9aa33</color>
       <color name="secondaryDark_light">#f69020</color>
 
+
+      //Dark Theme...
+      <color name="primaryLight_dark">#AAB6FE</color>
+      <color name="primary_dark">#7986CB</color>
+      <color name="primaryDark_dark">#49599A</color>
+
+
+      //Normal Colors....
       <color name="dark">#313c44</color>
       <color name="darker">#151b20</color>
       <color name="black">#FF000000</color>
