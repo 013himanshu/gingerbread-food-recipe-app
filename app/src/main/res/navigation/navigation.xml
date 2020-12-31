@@ -20,4 +20,9 @@
         android:name="com.example.gingerbread.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/jokeFragment"
+        android:name="com.example.gingerbread.JokeFragment"
+        android:label="fragment_joke"
+        tools:layout="@layout/fragment_joke" />
 </navigation>
