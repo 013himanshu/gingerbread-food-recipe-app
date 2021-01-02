@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setupWithNavController(navController)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
+        binding.bottomNavigationView.background = null
+        binding.bottomNavigationView.menu.getItem(2).isEnabled = false
+
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
