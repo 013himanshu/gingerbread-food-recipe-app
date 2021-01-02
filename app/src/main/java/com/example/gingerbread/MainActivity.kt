@@ -2,12 +2,15 @@ package com.example.gingerbread
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.gingerbread.Fragments.RecipeFragment
 import com.example.gingerbread.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -31,7 +34,23 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.bottomNavigationView.background = null
-        binding.bottomNavigationView.menu.getItem(2).isEnabled = false
+
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            when ((destination as FragmentNavigator.Destination).className) {
+                RecipeFragment::class.qualifiedName -> {
+                    binding.fab.visibility = View.VISIBLE
+                    binding.bottomAppBar.fabCradleMargin = 25f
+                    binding.bottomAppBar.fabCradleRoundedCornerRadius = 25f
+                    binding.bottomAppBar.cradleVerticalOffset = 25f
+                }
+                else -> {
+                    binding.fab.visibility = View.GONE
+                    binding.bottomAppBar.fabCradleMargin = 0f
+                    binding.bottomAppBar.fabCradleRoundedCornerRadius = 0f
+                    binding.bottomAppBar.cradleVerticalOffset = 0f
+                }
+            }
+        }
 
 
     }

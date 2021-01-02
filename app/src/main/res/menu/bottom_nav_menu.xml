@@ -8,9 +8,6 @@
         android:title="@string/search"
         android:icon="@drawable/ic_round_search_24"/>
 
-    <item android:id="@+id/placeholder"
-        android:title=""/>
-
     <item android:id="@+id/savedRecipeFragment"
         android:title="@string/saved"
         android:icon="@drawable/ic_round_bookmark_border_24"/>
