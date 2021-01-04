@@ -33,24 +33,23 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setupWithNavController(navController)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        binding.bottomNavigationView.background = null
 
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
-            when ((destination as FragmentNavigator.Destination).className) {
-                RecipeFragment::class.qualifiedName -> {
-                    binding.fab.visibility = View.VISIBLE
-                    binding.bottomAppBar.fabCradleMargin = 25f
-                    binding.bottomAppBar.fabCradleRoundedCornerRadius = 25f
-                    binding.bottomAppBar.cradleVerticalOffset = 25f
-                }
-                else -> {
-                    binding.fab.visibility = View.GONE
-                    binding.bottomAppBar.fabCradleMargin = 0f
-                    binding.bottomAppBar.fabCradleRoundedCornerRadius = 0f
-                    binding.bottomAppBar.cradleVerticalOffset = 0f
-                }
-            }
-        }
+//        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+//            when ((destination as FragmentNavigator.Destination).className) {
+//                RecipeFragment::class.qualifiedName -> {
+//                    binding.fab.visibility = View.VISIBLE
+//                    binding.bottomAppBar.fabCradleMargin = 25f
+//                    binding.bottomAppBar.fabCradleRoundedCornerRadius = 25f
+//                    binding.bottomAppBar.cradleVerticalOffset = 25f
+//                }
+//                else -> {
+//                    binding.fab.visibility = View.GONE
+//                    binding.bottomAppBar.fabCradleMargin = 0f
+//                    binding.bottomAppBar.fabCradleRoundedCornerRadius = 0f
+//                    binding.bottomAppBar.cradleVerticalOffset = 0f
+//                }
+//            }
+//        }
 
 
     }
