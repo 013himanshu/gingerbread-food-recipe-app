@@ -1,4 +1,4 @@
-package com.example.gingerbread.Fragments
+package com.example.gingerbread.ui.fragments.savedrecipe
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,14 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.gingerbread.R
 
-class SearchFragment : Fragment() {
+class SavedRecipeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        return inflater.inflate(R.layout.fragment_saved_recipe, container, false)
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.gingerbread.Fragments
+package com.example.gingerbread.ui.fragments.joke
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:background="@color/primary_light"
         app:layoutDescription="@xml/activity_splashscreen_xml_constraintlayout_scene"
-        tools:context=".SplashscreenActivity">
+        tools:context=".ui.SplashscreenActivity">
 
         <!-- contrain on top of app name in end -->
         <ImageView

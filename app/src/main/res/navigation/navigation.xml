@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/recipeFragment"
-        android:name="com.example.gingerbread.Fragments.RecipeFragment"
+        android:name="com.example.gingerbread.ui.fragments.recipe.RecipeFragment"
         android:label="Gingerbread"
         tools:layout="@layout/fragment_recipe" />
     <fragment
         android:id="@+id/savedRecipeFragment"
-        android:name="com.example.gingerbread.Fragments.SavedRecipeFragment"
+        android:name="com.example.gingerbread.ui.fragments.savedrecipe.SavedRecipeFragment"
         android:label="Saved Recipes"
         tools:layout="@layout/fragment_saved_recipe" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.gingerbread.Fragments.SearchFragment"
+        android:name="com.example.gingerbread.ui.fragments.search.SearchFragment"
         android:label="Search"
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/jokeFragment"
-        android:name="com.example.gingerbread.Fragments.JokeFragment"
+        android:name="com.example.gingerbread.ui.fragments.joke.JokeFragment"
         android:label="Food Joke"
         tools:layout="@layout/fragment_joke" />
 </navigation>

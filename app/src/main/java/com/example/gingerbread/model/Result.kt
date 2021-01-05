@@ -1,4 +1,4 @@
-package com.example.gingerbread.Model
+package com.example.gingerbread.model
 
 
 import com.google.gson.annotations.SerializedName

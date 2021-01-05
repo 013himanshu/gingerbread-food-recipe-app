@@ -1,4 +1,4 @@
-package com.example.gingerbread.Fragments
+package com.example.gingerbread.ui.fragments.recipe
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.gingerbread.R
 import com.example.gingerbread.databinding.FragmentRecipeBinding
-import org.jsoup.helper.DataUtil
 
 class RecipeFragment : Fragment() {
     private lateinit var binding: FragmentRecipeBinding

@@ -1,10 +1,11 @@
-package com.example.gingerbread
+package com.example.gingerbread.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.databinding.DataBindingUtil
+import com.example.gingerbread.R
 import com.example.gingerbread.databinding.ActivitySplashscreenBinding
 
 class SplashscreenActivity : AppCompatActivity() {
