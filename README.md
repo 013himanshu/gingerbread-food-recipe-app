@@ -6,5 +6,6 @@
 - Share your favourite recipes with your friends.
 - Save your favourite recipes and access them even without internet.
 - No ads and no hidden cost upon usage.
+- Support for Dark Theme.
 
 ### Note: The app is currently in development.
