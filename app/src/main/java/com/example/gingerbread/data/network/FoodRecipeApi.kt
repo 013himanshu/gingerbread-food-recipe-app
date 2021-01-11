@@ -1,4 +1,4 @@
-package com.example.gingerbread
+package com.example.gingerbread.data.network
 
 import com.example.gingerbread.model.FoodRecipe
 import retrofit2.Response

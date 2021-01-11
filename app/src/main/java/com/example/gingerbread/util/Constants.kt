@@ -1,4 +1,4 @@
-package com.example.gingerbread
+package com.example.gingerbread.util
 
 class Constants {
     companion object {

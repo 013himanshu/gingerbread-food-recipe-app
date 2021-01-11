@@ -1,7 +1,7 @@
 package com.example.gingerbread.di
 
-import com.example.gingerbread.Constants.Companion.BASE_URL
-import com.example.gingerbread.FoodRecipeApi
+import com.example.gingerbread.util.Constants.Companion.BASE_URL
+import com.example.gingerbread.data.network.FoodRecipeApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
