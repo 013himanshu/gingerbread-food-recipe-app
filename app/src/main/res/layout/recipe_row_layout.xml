@@ -1,143 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recipeRowLayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/row_cardView"
-        android:layout_width="0dp"
+    <data>
+        <variable
+            name="result"
+            type="com.example.gingerbread.model.Result" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recipeRowLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="2dp"
-        app:cardCornerRadius="10dp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="@color/mediumgrey"
-        app:strokeWidth="1dp">
+        android:layout_margin="5dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/row_cardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/mediumgrey"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
 
 
-            <ImageView
-                android:id="@+id/recipeImageView"
-                android:layout_width="200dp"
-                android:layout_height="0dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                <ImageView
+                    android:id="@+id/recipeImageView"
+                    android:layout_width="200dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageView
-                android:id="@+id/heart_imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
-                android:layout_marginTop="24dp"
-                app:tint="@color/red"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/heart_textView"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/heart_textView"
-                app:layout_constraintTop_toBottomOf="@+id/recipeDescription"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/ic_round_favorite_24" />
+                <ImageView
+                    android:id="@+id/heart_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="36dp"
+                    android:layout_marginTop="24dp"
+                    app:tint="@color/red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/heart_textView"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/heart_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeDescription"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_round_favorite_24" />
 
-            <ImageView
-                android:id="@+id/clock_imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:tint="@color/secondary_light"
-                app:layout_constraintEnd_toEndOf="@+id/clock_textView"
-                app:layout_constraintStart_toStartOf="@+id/clock_textView"
-                app:layout_constraintTop_toTopOf="@+id/heart_imageView"
-                app:srcCompat="@drawable/ic_round_access_time_24" />
+                <ImageView
+                    android:id="@+id/clock_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:tint="@color/secondary_light"
+                    app:layout_constraintEnd_toEndOf="@+id/clock_textView"
+                    app:layout_constraintStart_toStartOf="@+id/clock_textView"
+                    app:layout_constraintTop_toTopOf="@+id/heart_imageView"
+                    app:srcCompat="@drawable/ic_round_access_time_24" />
 
-            <ImageView
-                android:id="@+id/leaf_imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="@+id/leaf_textView"
-                app:layout_constraintStart_toStartOf="@+id/leaf_textView"
-                app:layout_constraintTop_toTopOf="@+id/clock_imageView"
-                app:srcCompat="@drawable/ic_round_eco_24" />
+                <ImageView
+                    android:id="@+id/leaf_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/leaf_textView"
+                    app:layout_constraintStart_toStartOf="@+id/leaf_textView"
+                    app:layout_constraintTop_toTopOf="@+id/clock_imageView"
+                    app:srcCompat="@drawable/ic_round_eco_24" />
 
-            <TextView
-                android:id="@+id/heart_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:textColor="@color/red"
-                app:layout_constraintStart_toStartOf="@+id/recipeDescription"
-                app:layout_constraintTop_toBottomOf="@+id/heart_imageView"
-                tools:text="100" />
+                <TextView
+                    android:id="@+id/heart_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/red"
+                    app:layout_constraintStart_toStartOf="@+id/recipeDescription"
+                    app:layout_constraintTop_toBottomOf="@+id/heart_imageView"
+                    tools:text="100" />
 
-            <TextView
-                android:id="@+id/recipeDescription"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/roboto"
-                android:maxLines="3"
-                android:textColor="@color/darkgrey"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@+id/recipeTitle"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/recipeTitle"
-                app:layout_constraintTop_toBottomOf="@+id/recipeTitle"
-                tools:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes" />
+                <TextView
+                    android:id="@+id/recipeDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto"
+                    android:maxLines="3"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/recipeTitle"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/recipeTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeTitle"
+                    tools:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes" />
 
-            <TextView
-                android:id="@+id/clock_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:textAlignment="center"
-                android:textColor="@color/secondary_light"
-                app:layout_constraintStart_toEndOf="@+id/heart_textView"
-                app:layout_constraintTop_toBottomOf="@+id/clock_imageView"
-                tools:text="100" />
+                <TextView
+                    android:id="@+id/clock_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondary_light"
+                    app:layout_constraintStart_toEndOf="@+id/heart_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/clock_imageView"
+                    tools:text="100" />
 
-            <TextView
-                android:id="@+id/recipeTitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/roboto_bold"
-                android:maxLines="2"
-                android:textColor="@color/darker"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/recipeImageView"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Kadhai Paneer" />
+                <TextView
+                    android:id="@+id/recipeTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_bold"
+                    android:maxLines="2"
+                    android:textColor="@color/darker"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/recipeImageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Kadhai Paneer" />
 
-            <TextView
-                android:id="@+id/leaf_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:textAlignment="center"
-                app:layout_constraintStart_toEndOf="@+id/clock_textView"
-                app:layout_constraintTop_toBottomOf="@+id/leaf_imageView"
-                tools:text="100" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/leaf_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toEndOf="@+id/clock_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/leaf_imageView"
+                    tools:text="100" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.card.MaterialCardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
