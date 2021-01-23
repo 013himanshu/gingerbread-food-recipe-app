@@ -10,7 +10,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.gingerbread.R
 import com.example.gingerbread.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     lateinit var binding: ActivityMainBinding
@@ -30,25 +32,6 @@ class MainActivity : AppCompatActivity() {
         )
         binding.bottomNavigationView.setupWithNavController(navController)
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-
-//        navController.addOnDestinationChangedListener { controller, destination, arguments ->
-//            when ((destination as FragmentNavigator.Destination).className) {
-//                RecipeFragment::class.qualifiedName -> {
-//                    binding.fab.visibility = View.VISIBLE
-//                    binding.bottomAppBar.fabCradleMargin = 25f
-//                    binding.bottomAppBar.fabCradleRoundedCornerRadius = 25f
-//                    binding.bottomAppBar.cradleVerticalOffset = 25f
-//                }
-//                else -> {
-//                    binding.fab.visibility = View.GONE
-//                    binding.bottomAppBar.fabCradleMargin = 0f
-//                    binding.bottomAppBar.fabCradleRoundedCornerRadius = 0f
-//                    binding.bottomAppBar.cradleVerticalOffset = 0f
-//                }
-//            }
-//        }
-
 
     }
 
