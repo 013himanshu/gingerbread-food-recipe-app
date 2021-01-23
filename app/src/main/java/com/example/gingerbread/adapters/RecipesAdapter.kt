@@ -11,7 +11,7 @@ import com.example.gingerbread.util.RecipeDiffUtil
 
 
 class RecipesAdapter: RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
-    private var recipe = emptyList<Result>()
+    private var recipes = emptyList<Result>()
 
     class MyViewHolder(private val binding: RecipeRowLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(result: Result) {
@@ -33,18 +33,18 @@ class RecipesAdapter: RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentResult = recipe[position]
-        holder.bind(currentResult)
+        val currentRecipe = recipes[position]
+        holder.bind(currentRecipe)
     }
 
     override fun getItemCount(): Int {
-        return recipe.size
+        return recipes.size
     }
 
     fun setData(newData: FoodRecipe) {
-        val recipeDiffUtil = RecipeDiffUtil(recipe, newData.results)
+        val recipeDiffUtil = RecipeDiffUtil(recipes, newData.results)
         val diffUtilResult = DiffUtil.calculateDiff(recipeDiffUtil)
-        recipe = newData.results
+        recipes = newData.results
 //        notifyDataSetChanged()
         diffUtilResult.dispatchUpdatesTo(this)
     }

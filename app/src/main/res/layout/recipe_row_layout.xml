@@ -75,6 +75,7 @@
                     android:id="@+id/leaf_imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    setVeganColor="@{result.vegan}"
                     app:layout_constraintEnd_toEndOf="@+id/leaf_textView"
                     app:layout_constraintStart_toStartOf="@+id/leaf_textView"
                     app:layout_constraintTop_toTopOf="@+id/clock_imageView"
@@ -86,6 +87,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:textColor="@color/red"
+                    setNumberOfLikes="@{result.aggregateLikes}"
                     app:layout_constraintStart_toStartOf="@+id/recipeDescription"
                     app:layout_constraintTop_toBottomOf="@+id/heart_imageView"
                     tools:text="100" />
@@ -100,6 +102,7 @@
                     android:maxLines="3"
                     android:textColor="@color/darkgrey"
                     android:textSize="14sp"
+                    android:text="@{result.summary}"
                     app:layout_constraintEnd_toEndOf="@+id/recipeTitle"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/recipeTitle"
@@ -112,6 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:textAlignment="center"
+                    setRecipeTime="@{result.readyInMinutes}"
                     android:textColor="@color/secondary_light"
                     app:layout_constraintStart_toEndOf="@+id/heart_textView"
                     app:layout_constraintTop_toBottomOf="@+id/clock_imageView"
@@ -133,6 +137,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/recipeImageView"
                     app:layout_constraintTop_toTopOf="parent"
+                    android:text="@{result.title}"
                     tools:text="Kadhai Paneer" />
 
                 <TextView
@@ -141,9 +146,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:textAlignment="center"
+                    setVeganColor="@{result.vegan}"
                     app:layout_constraintStart_toEndOf="@+id/clock_textView"
                     app:layout_constraintTop_toBottomOf="@+id/leaf_imageView"
-                    tools:text="100" />
+                    tools:text="Vegan" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
