@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.gingerbread.databinding.RecipeRowLayoutBinding
 import com.example.gingerbread.model.FoodRecipe
 import com.example.gingerbread.model.Result
-import com.example.gingerbread.util.RecipeDiffUtil
+import com.example.gingerbread.util.RecipesDiffUtil
 
 
 class RecipesAdapter: RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
@@ -42,8 +42,8 @@ class RecipesAdapter: RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
     }
 
     fun setData(newData: FoodRecipe) {
-        val recipeDiffUtil = RecipeDiffUtil(recipes, newData.results)
-        val diffUtilResult = DiffUtil.calculateDiff(recipeDiffUtil)
+        val recipesDiffUtil = RecipesDiffUtil(recipes, newData.results)
+        val diffUtilResult = DiffUtil.calculateDiff(recipesDiffUtil)
         recipes = newData.results
 //        notifyDataSetChanged()
         diffUtilResult.dispatchUpdatesTo(this)

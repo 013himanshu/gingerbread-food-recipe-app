@@ -1,6 +1,5 @@
 package com.example.gingerbread.bindingadapters
 
-import android.media.Image
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -8,7 +7,6 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import coil.load
 import com.example.gingerbread.R
-import javax.inject.Singleton
 
 class RecipeRowBinding {
     companion object {

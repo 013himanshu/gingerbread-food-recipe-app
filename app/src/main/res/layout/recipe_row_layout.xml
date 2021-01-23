@@ -12,15 +12,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/recipeRowLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/row_cardView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:elevation="2dp"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="5dp"
             app:cardUseCompatPadding="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -150,7 +149,7 @@
                     setVeganColor="@{result.vegan}"
                     app:layout_constraintStart_toEndOf="@+id/clock_textView"
                     app:layout_constraintTop_toBottomOf="@+id/leaf_imageView"
-                    tools:text="Vegan" />
+                    android:text="Vegan" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>

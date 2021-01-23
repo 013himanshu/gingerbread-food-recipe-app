@@ -36,7 +36,7 @@ class MainViewModel @ViewModelInject constructor(private val repository: Reposit
             }
         }
         else {
-            recipesResponse.value = NetworkResult.Error("No Internet Connection")
+            recipesResponse.value = NetworkResult.Error("No Internet Connection.")
         }
     }
 

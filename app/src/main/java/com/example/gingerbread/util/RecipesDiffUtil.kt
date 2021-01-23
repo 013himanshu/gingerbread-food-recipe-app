@@ -2,7 +2,7 @@ package com.example.gingerbread.util
 import androidx.recyclerview.widget.DiffUtil
 import com.example.gingerbread.model.Result
 
-class RecipeDiffUtil(private val oldList: List<Result>, private val newList: List<Result>): DiffUtil.Callback() {
+class RecipesDiffUtil(private val oldList: List<Result>, private val newList: List<Result>): DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return oldList.size
     }
