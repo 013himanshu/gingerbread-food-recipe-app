@@ -1,4 +1,4 @@
-package com.example.gingerbread
+package com.example.gingerbread.viewmodel
 
 import android.app.Application
 import android.content.Context
@@ -13,7 +13,6 @@ import com.example.gingerbread.model.FoodRecipe
 import com.example.gingerbread.util.NetworkResult
 import kotlinx.coroutines.launch
 import retrofit2.Response
-import java.lang.Error
 import java.lang.Exception
 
 class MainViewModel @ViewModelInject constructor(private val repository: Repository, application: Application): AndroidViewModel(application) {

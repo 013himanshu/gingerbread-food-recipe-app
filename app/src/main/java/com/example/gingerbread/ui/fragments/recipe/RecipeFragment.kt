@@ -7,15 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.gingerbread.MainViewModel
+import com.example.gingerbread.viewmodel.MainViewModel
 import com.example.gingerbread.R
-import com.example.gingerbread.RecipeViewModel
+import com.example.gingerbread.viewmodel.RecipeViewModel
 import com.example.gingerbread.adapters.RecipesAdapter
 import com.example.gingerbread.databinding.FragmentRecipeBinding
-import com.example.gingerbread.util.Constants.Companion.API_KEY
 import com.example.gingerbread.util.NetworkResult
 import dagger.hilt.android.AndroidEntryPoint
 

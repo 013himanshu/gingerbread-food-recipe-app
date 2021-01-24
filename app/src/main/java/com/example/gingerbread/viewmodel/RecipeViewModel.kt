@@ -1,4 +1,4 @@
-package com.example.gingerbread
+package com.example.gingerbread.viewmodel
 
 import android.app.Application
 import androidx.hilt.lifecycle.ViewModelInject
